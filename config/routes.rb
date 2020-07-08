@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   root 'home#index'
   get '/search' => 'search#index', :as => 'search'
   get '/offical' => 'official#index', :as => 'officals'
+  resources 'division'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
