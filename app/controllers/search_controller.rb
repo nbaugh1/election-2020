@@ -5,6 +5,7 @@ class SearchController < ApplicationController
     if params['location']
       res = Civics::Search.by_location(params['location'])
       @response = JSON.parse res.body
+      redirect_to officals_path
     end
   end
 end
