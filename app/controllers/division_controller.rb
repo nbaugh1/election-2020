@@ -2,11 +2,7 @@
 
 class DivisionController < ApplicationController
   def index
-    @divisions = []
-    session[:divisions].each do |d|
-      div = Division.find_by(id: d)
-      @divisions.push(div)
-    end
+    byebug
   end
 
   def new
